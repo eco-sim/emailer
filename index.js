@@ -12,7 +12,9 @@ app.use(function(req, res, next) {
 });
 
 var transporter = nodemailer.createTransport({
-  service: 'gmail',
+  host: 'gmail.com',
+	port: 465,
+	secure: true,
   auth: {
     user: 'the.real.e.say@gmail.com',
     pass: 'lxlhjclaoqbnmfoj'
