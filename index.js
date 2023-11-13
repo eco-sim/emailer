@@ -44,6 +44,7 @@ app.get("/", (req, resp) => {resp.send("Hello World");});
 
 app.post("/email", async (request, response) => {
 	var data = await request.body;
+	console.log(data.text);
 	sendEmail('carsonouckama@gmail.com', data.text);
 	response.send({success: true});
 });
