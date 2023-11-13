@@ -40,7 +40,7 @@ function sendEmail(e, t) {
 app.get("/", (req, resp) => {resp.send("Hello World");});
 
 app.post("/email", async (request, response) => {
-	var data = request.body;
+	var data = await request.body;
 	console.log(data);
 	sendEmail('carsonouckama@gmail.com', "Hola!");
 	response.send({success: true});
