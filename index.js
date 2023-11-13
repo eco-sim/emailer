@@ -12,7 +12,7 @@ app.use(function(req, res, next) {
 });
 
 var transporter = nodemailer.createTransport({
-  host: 'gmail.com',
+  service: 'gmail.com',
 	secure: false,
   auth: {
     user: 'the.real.e.say@gmail.com',
