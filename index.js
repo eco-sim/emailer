@@ -41,7 +41,8 @@ app.get("/", (req, resp) => {resp.send("Hello World");});
 
 app.post("/email", (request, response) => {
 	var data = request.body;
-	sendEmail('carsonouckama@gmail.com', data.text);
+	console.log(data);
+	sendEmail('carsonouckama@gmail.com', "Hola!");
 	response.send({success: true});
 })
 
