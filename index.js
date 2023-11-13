@@ -40,11 +40,11 @@ function sendEmail(e, t) {
 app.listen(process.env.PORT || 3000, () => console.log('listening at 3000'));
 app.use(express.json());
 
-app.get("/", (req, resp) => {resp.send("Hello World");});
+app.get("/", (req, resp) => {resp.sendFile(path.join(__dirname, "/index.html"));});
 
-app.post("/email", async (request, response) => {
-	var data = await request.body;
-	console.log(data.text);
-	sendEmail('carsonouckama@student.visioncsd.org', data.text);
+app.post("/email", (request, response) => {
+	var data = request.body;
+	sendEmail('carsonouckama@gmail.com', data.text);
 	response.send({success: true});
 });
+
