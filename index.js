@@ -13,16 +13,15 @@ app.use(function(req, res, next) {
 
 var transporter = nodemailer.createTransport({
   service: 'gmail.com',
-	secure: false,
   auth: {
-    user: 'the.real.e.say@gmail.com',
-    pass: 'lxlhjclaoqbnmfoj'
+    user: 'carsonouckama@gmail.com',
+    pass: 'msym pdld npej ychq'
   }
 });
 
 function sendEmail(e, t) {
 	var mailOptions = {
-  	from: 'the.real.e.say@gmail.com',
+  	from: 'carsonouckama@gmail.com',
   	to: e,
   	subject: 'E-Say Notification',
   	text: t
