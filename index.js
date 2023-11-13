@@ -37,6 +37,9 @@ function sendEmail(e, t) {
 
 }
 
+app.listen(process.env.PORT || 3000, () => console.log('listening at 3000'));
+app.use(express.json());
+
 app.get("/", (req, resp) => {resp.send("Hello World");});
 
 app.post("/email", async (request, response) => {
@@ -44,9 +47,4 @@ app.post("/email", async (request, response) => {
 	console.log(data);
 	sendEmail('carsonouckama@gmail.com', "Hola!");
 	response.send({success: true});
-})
-
-
-app.listen(process.env.PORT || 3000, () => console.log('listening at 3000'));
-app.use( express.static('public') );
-app.use(express.json());
+});
